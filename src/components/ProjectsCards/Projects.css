@@ -1,0 +1,86 @@
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+.projects {
+  width: 100%;
+  height: fit-content;
+  padding-block: 50px;
+  display: flex;
+  justify-content: center;
+
+  .projects-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2rem;
+    width: 40%;
+    height: 500px;
+    text-align: center;
+    overflow: hidden;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+      0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+      0 16px 16px rgba(0, 0, 0, 0.1);
+    border-image: fill 0 linear-gradient(#0003, #000);
+    transition: 0.3s;
+    
+    h2 {
+      font-family: var(--font-sans);
+      font-size: 2rem;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+    p {
+      font-family: "Montserrat", sans-serif;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    button {
+      cursor: pointer;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.65rem;
+      font-weight: bold;
+      letter-spacing: 0.025rem;
+      text-transform: uppercase;
+      opacity: 0;
+      color: white;
+      background-color: black;
+      border: none;
+      font-family: var(--font-serif);
+      transition: 0.3s;
+    }
+    .content {
+      transform: translateY(50%);
+      transition: 0.3s;
+    }
+    &:hover {
+      .content {
+        transform: translateY(0%);
+        * {
+          opacity: 1;
+          transition: 0.3s;
+        }
+      }
+    }
+    &:nth-child(1) {
+      background-image: url("https://avatars.mds.yandex.net/get-altay/2390040/2a0000017522bf006f060331b77503820b54/orig");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: saturate(0%);
+    }
+  }
+}
