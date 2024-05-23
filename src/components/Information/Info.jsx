@@ -51,7 +51,7 @@ export function Info() {
           <h4>Education</h4>
           <h6>9th general education school of 2016</h6>
           <p>
-            In 2016, I was deeply immersed in the vibrant world of general
+            In 2015, I was deeply immersed in the vibrant world of general
             education school. Mathematics intrigued me with its intricate
             puzzles and logical reasoning, laying the groundwork for my later
             fascination with strategic thinking in chess and coding.
