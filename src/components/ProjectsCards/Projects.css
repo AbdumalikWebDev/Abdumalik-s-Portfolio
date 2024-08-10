@@ -5,18 +5,55 @@
   --font-serif: "Cardo", serif;
 }
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 99vw;
+  }
+}
 .projects {
   width: 100%;
   height: fit-content;
   padding-block: 50px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 
+  .dashed-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0px;
+    border-top: 2px dashed #000;
+    animation: expandLine 3s forwards;
+    animation-timeline: scroll();
+    animation-range: 500px;
+  }
+  .title {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+  }
   .projects-container {
     width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .card1 {
+    background-image: url("https://avatars.mds.yandex.net/get-altay/2390040/2a0000017522bf006f060331b77503820b54/orig");
+  }
+  .card2 {
+    background-image: url("https://vgudok.com/sites/default/files/styles/1040x570/public/field/image/dannie_obl.jpg?itok=iEzX3So6");
   }
   .card {
     position: relative;
@@ -35,7 +72,11 @@
       0 16px 16px rgba(0, 0, 0, 0.1);
     border-image: fill 0 linear-gradient(#0003, #000);
     transition: 0.3s;
-    
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: saturate(0%);
+
     h2 {
       font-family: var(--font-sans);
       font-size: 2rem;
@@ -74,13 +115,6 @@
           transition: 0.3s;
         }
       }
-    }
-    &:nth-child(1) {
-      background-image: url("https://avatars.mds.yandex.net/get-altay/2390040/2a0000017522bf006f060331b77503820b54/orig");
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      filter: saturate(0%);
     }
   }
 }
