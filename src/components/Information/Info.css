@@ -1,12 +1,13 @@
-/* * {
-    border: 1px solid red;
-} */
 .personalInfo {
   width: 100%;
+  min-height: 100vh;
   padding-block: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #1F316F;
+  position: relative;
+  z-index: 5;
 }
 .personal-info-container {
   width: 80%;
@@ -19,10 +20,12 @@
     font-size: 1.5rem;
     font-family: "Platypi", serif;
     margin-bottom: 10px;
+    color: var(--white);
   }
   h6 {
     font-size: 1.2rem;
     font-family: "EB Garamond", serif;
+    color: var(--white);
   }
   p {
     font-family: "Montserrat", sans-serif;
@@ -30,9 +33,13 @@
     align-items: center;
     margin-block: 10px;
     line-height: 150%;
+    color: #ffffffc0;
+    font-weight: 500;
+
     i {
-        font-size: 1.5rem;
-        padding-right: 5px;
+      font-size: 1.5rem;
+      padding-right: 5px;
+      color: var(--white);
     }
   }
 }

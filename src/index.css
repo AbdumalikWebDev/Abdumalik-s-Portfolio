@@ -5,6 +5,17 @@
   line-height: calc(1em + 0.5rem);
 }
 a {
-    text-decoration: none;
-    cursor: pointer !important;
+  text-decoration: none;
+  cursor: pointer !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+  .card {
+    width: 45% !important;
+  }
 }
