@@ -48,7 +48,8 @@
   align-items: center;
 }
 #logo {
-  width: min(100%, 160px);
+  width: 10vw;
+  transform: translateX(-25%);
   transition: all 0.2s;
   user-select: none;
 }

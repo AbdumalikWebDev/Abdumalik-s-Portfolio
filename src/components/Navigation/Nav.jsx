@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 //* Image
-import logo from "/public/Logo.png";
+import logo from "/assets/Logo.png";
 export function Nav() {
   const referrerButtons = useRef([]);
   const navbarRef = useRef(null);

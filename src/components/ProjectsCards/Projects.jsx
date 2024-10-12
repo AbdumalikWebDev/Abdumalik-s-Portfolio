@@ -16,14 +16,13 @@ export const Projects = () => {
           <div className="content">
             <p className="project-desc">
               <span className="bold">Welcome to My WebStudio</span>
-              <br /> – where code meets creativity, and pixels align with
-              perfection.
+              <br /> – My first project ever.
               <br /> At WebStudio, we deliver innovative and efficient web
               solutions tailored to your business needs. Our attention to
               detail, punctuality, and use of modern technologies ensure that
               every project is carefully planned and executed to perfection.
               <img
-                src="/public/smile-icon.svg"
+                src="/assets/smile-icon.svg"
                 alt="smile"
                 className="smile-icon"
               />
@@ -33,8 +32,8 @@ export const Projects = () => {
               target="_blank"
               aria-label="View Project"
               className="view-project-btn">
-              <button class="cta btn">
-                <span class="hover-underline-animation"> View Now </span>
+              <button className="cta btn">
+                <span className="hover-underline-animation"> View Now </span>
                 <svg
                   id="arrow-horizontal"
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +69,8 @@ export const Projects = () => {
               target="_blank"
               aria-label="View Project"
               className="view-project-btn">
-              <button class="cta btn">
-                <span class="hover-underline-animation"> View Now </span>
+              <button className="cta btn">
+                <span className="hover-underline-animation"> View Now </span>
                 <svg
                   id="arrow-horizontal"
                   xmlns="http://www.w3.org/2000/svg"
@@ -109,8 +108,8 @@ export const Projects = () => {
               target="_blank"
               aria-label="View Project"
               className="view-project-btn">
-              <button class="cta btn">
-                <span class="hover-underline-animation"> View Now </span>
+              <button className="cta btn">
+                <span className="hover-underline-animation"> View Now </span>
                 <svg
                   id="arrow-horizontal"
                   xmlns="http://www.w3.org/2000/svg"
