@@ -1,9 +1,14 @@
 import "./Content.css";
+import { useEffect } from "react";
 
 import lineVector from "/assets/line-main.svg";
 import devImage from "/assets/dev-image.webp";
 
 export function MainContent({ toggleNavbar }) {
+  useEffect(() => {
+    const preloadImage = new Image();
+    preloadImage.src = "/assets/dev-image.webp";
+  }, []);
   (function () {
     window.addEventListener("scroll", function () {
       var depth, i, layer, layers, len, movement, topDistance, translate3d;
@@ -34,6 +39,7 @@ export function MainContent({ toggleNavbar }) {
       <button
         className="open-nav-btn"
         onClick={toggleNavbar}
+        aria-label="Open Navbar Button"
         style={{
           position: "absolute",
           backgroundColor: "transparent",

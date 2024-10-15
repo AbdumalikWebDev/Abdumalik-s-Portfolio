@@ -8,7 +8,7 @@ export function Info() {
     <section className="personalInfo" id="info-section">
       <div className="personal-info-container wrapper">
         <div className="about-me" data-aos="fade-left">
-          <h4>About Me</h4>
+          <span className="info-title">About Me</span>
           <p>
             I enjoy breaking down complex problems into manageable parts and
             finding optimal solutions. My commitment to both chess and gym
@@ -19,7 +19,9 @@ export function Info() {
           </p>
         </div>
         <div className="skills">
-          <h4 data-aos="fade-down">Skills</h4>
+          <span data-aos="fade-down" className="info-title">
+            Skills
+          </span>
           <div className="row1">
             <p data-aos="fade-right">
               <i className="fa-brands fa-html5"></i>HTML
@@ -37,8 +39,8 @@ export function Info() {
           <div className="row2"></div>
         </div>
         <div className="education" data-aos="fade-up">
-          <h4>Education</h4>
-          <h6>9th general education school of 2016</h6>
+          <span className="info-title">Education</span>
+          <h3>9th general education school of 2016</h3>
           <p>
             In 2015, I was deeply immersed in the vibrant world of general
             education school. Mathematics intrigued me with its intricate
@@ -47,7 +49,7 @@ export function Info() {
           </p>
         </div>
         <div className="experience" data-aos="fade-up">
-          <h4>Experience</h4>
+          <span className="info-title">Experience</span>
           <p>
             My journey in front-end development has been guided by a commitment
             to continuous learning and growth. I've delved into HTML, CSS, and

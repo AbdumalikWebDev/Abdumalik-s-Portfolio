@@ -34,13 +34,15 @@
   }
 }
 .card1 .card-img {
-  background-image: url("https://avatars.mds.yandex.net/get-altay/2390040/2a0000017522bf006f060331b77503820b54/orig");
+  background-image: url("/assets/webstudio.webp");
+  image-rendering: optimizeSpeed;
 }
 .card2 .card-img {
-  background-image: url("https://vgudok.com/sites/default/files/styles/1040x570/public/field/image/dannie_obl.jpg?itok=iEzX3So6");
+  background-image: url("/assets/promonitor.webp");
 }
 .card3 .card-img {
   background-image: url("/assets/foodwagon-thumb.webp");
+  image-rendering: optimizeSpeed;
 }
 .card {
   position: relative;

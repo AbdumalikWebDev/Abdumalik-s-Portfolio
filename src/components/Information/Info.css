@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1F316F;
+  background-color: #1f316f;
   position: relative;
   z-index: 5;
 }
@@ -16,15 +16,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 20px;
-  h4 {
+  .info-title {
     font-size: 1.5rem;
-    font-family: "Platypi", serif;
+    font-family: var(--platypi);
     margin-bottom: 10px;
     color: var(--white);
   }
-  h6 {
+  h3 {
     font-size: 1.2rem;
-    font-family: "EB Garamond", serif;
+    font-family: var(--eb-garamond);
     color: var(--white);
   }
   p {

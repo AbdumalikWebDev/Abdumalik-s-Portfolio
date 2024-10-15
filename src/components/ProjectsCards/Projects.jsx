@@ -5,7 +5,7 @@ import "/src/index.css";
 export const Projects = () => {
   return (
     <section className="projects" id="projects-section">
-      <h1 className="title">My Projects</h1>
+      <h4 className="title">My Projects</h4>
 
       <div className="projects-container">
         <div className="card1 card" data-aos="fade-up-left">
