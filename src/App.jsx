@@ -11,16 +11,23 @@ import { Footer } from "./components/FooterComponent/Footer.jsx";
 import "./App.css";
 import "./index.css";
 
+//* GSAP
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export function App() {
   const [isLoaded, setIsLoaded] = useState(false);
-
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const toggleNavbar = () => {
+    setNavbarOpen(!navbarOpen);
+  };
   useEffect(() => {
     AOS.init();
 
     const handleLoad = () => {
       setTimeout(() => {
         setIsLoaded(true);
-        AOS.refresh(); // Refresh AOS after content is loaded
+        AOS.refresh();
       }, 3000);
     };
 
@@ -35,18 +42,28 @@ export function App() {
       window.removeEventListener("load", handleLoad);
     };
   }, []);
-
   useEffect(() => {
     AOS.refresh();
   });
-
-  
-
+  useEffect(() => {
+    const isPhone = window.matchMedia("(max-width: 768px)").matches;
+    if (!isPhone) {
+      gsap.to("#doc-wrapper", {
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#doc-wrapper",
+          start: "top bottom",
+          end: "bottom bottom",
+          scrub: 1,
+        },
+      });
+    }
+  }, []);
   return (
-    <div>
+    <>
       {!isLoaded && (
         <div className="loading-card">
-          <div className="wrapper">
+          <div className="loading-wrapper">
             <div className="circle"></div>
             <div className="circle"></div>
             <div className="circle"></div>
@@ -56,15 +73,17 @@ export function App() {
           </div>
         </div>
       )}
-      <div className={isLoaded ? "content-visible" : "content-hidden"}>
-        <Nav></Nav>
-        <MainContent></MainContent>
+      <div
+        id="doc-wrapper"
+        className={isLoaded ? "content-visible" : "content-hidden"}>
+        <Nav navbarOpen={navbarOpen} toggleNavbar={toggleNavbar}></Nav>
+        <MainContent toggleNavbar={toggleNavbar}></MainContent>
         <div id="content">
           <Info></Info>
           <Projects></Projects>
           <Footer></Footer>
         </div>
       </div>
-    </div>
+    </>
   );
 }

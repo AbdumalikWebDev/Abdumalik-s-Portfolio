@@ -1,25 +1,16 @@
-/* eslint-disable react/no-unescaped-entities */
-import { useRef, useEffect } from "react";
+import { useEffect } from "react";
 //* CSS
 import "./Nav.css";
-//* GSAP
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 //* Image
-import logo from "/assets/Logo.png";
-export function Nav() {
-  const referrerButtons = useRef([]);
-  const navbarRef = useRef(null);
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: "smooth" });
-  };
+import logo from "/assets/Logo.webp";
+
+export function Nav({ navbarOpen, toggleNavbar }) {
   useEffect(() => {
     const handleScroll = () => {
       const referrerButtons = document.querySelectorAll(".referrer-btn");
-      const scrollPosition = window.scrollY + 50;
+      const scrollPosition = window.scrollY + 70;
       const logo = document.querySelector("#logo");
+      const closeBtn = document.querySelector(".nav-close-btn");
 
       if (scrollPosition > window.innerHeight) {
         referrerButtons.forEach((button) => {
@@ -27,11 +18,15 @@ export function Nav() {
         });
         logo.style.filter =
           "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(157deg) brightness(102%) contrast(101%)";
+        closeBtn.style.filter =
+          "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1%) hue-rotate(157deg) brightness(102%) contrast(101%)";
       } else {
         referrerButtons.forEach((button) => {
           button.style.setProperty("color", "#202020", "important");
         });
         logo.style.filter =
+          "brightness(0) saturate(100%) invert(10%) sepia(11%) saturate(7%) hue-rotate(18deg) brightness(93%) contrast(92%)";
+        closeBtn.style.filter =
           "brightness(0) saturate(100%) invert(10%) sepia(11%) saturate(7%) hue-rotate(18deg) brightness(93%) contrast(92%)";
       }
     };
@@ -43,39 +38,50 @@ export function Nav() {
     };
   }, []);
 
+  const handleReferralClick = (event) => {
+    // event.target gives the clicked element
+    const clickedButton = event.target;
+
+    // Here you can handle actions based on the button clicked
+    console.log("Clicked button: ", clickedButton);
+    toggleNavbar(); // Toggle the navbar
+  };
+
   return (
-    <nav className="nav" id="nav">
-      <div className="nav-container">
+    <nav className={navbarOpen ? "nav show-navbar" : "nav"} id="nav">
+      <div className="nav-container wrapper">
         <img src={logo} id="logo" alt="Scroll.M" />
+        <button className="nav-close-btn" onClick={toggleNavbar}>
+          <i className="fa-solid fa-xmark"></i> Close
+        </button>
         <div className="center">
           <a
             href="#projects-section"
-            onClick={() => scrollToSection("#projects-section")}
+            onClick={handleReferralClick}
             aria-label="Projects"
-            className="projects-btn referrer-btn"
-            ref={(el) => (referrerButtons.current[0] = el)}>
+            className="projects-btn referrer-btn">
             Projects
           </a>
           <a
             href="#info-section"
+            onClick={handleReferralClick}
             aria-label="About"
-            className="about-btn referrer-btn"
-            ref={(el) => (referrerButtons.current[1] = el)}>
+            className="about-btn referrer-btn">
             About
           </a>
           <a
             href="#"
+            onClick={handleReferralClick}
             aria-label="Contact me"
-            className="contact-btn referrer-btn"
-            ref={(el) => (referrerButtons.current[2] = el)}>
+            className="contact-btn referrer-btn">
             Contact me
           </a>
           <a
             href="https://t.me/newwebdevs"
+            onClick={handleReferralClick}
             aria-label="Blogs"
             target="_blank"
-            className="blogs-btn referrer-btn"
-            ref={(el) => (referrerButtons.current[3] = el)}>
+            className="blogs-btn referrer-btn">
             Blogs
           </a>
         </div>

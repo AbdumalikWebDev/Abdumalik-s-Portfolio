@@ -2,7 +2,7 @@
   --white-color: #fff;
   --not-available: #9e9e9e;
 }
-footer {
+.footer {
   width: 100%;
   height: fit-content;
   padding-block: 20px;
@@ -20,17 +20,18 @@ footer {
   justify-content: space-between;
 
   svg {
-    fill: var(--not-available);
+    fill: var(--white-color);
   }
   p {
-    color: var(--not-available);
+    color: var(--white-color);
     margin-left: 10px;
     cursor: not-allowed;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--montserrat);
     max-width: 100%;
   }
   a {
     color: var(--white-color);
+    font-family: inherit;
   }
 }
 .footer-left {
@@ -42,6 +43,11 @@ footer {
 .phone {
   display: flex;
 }
+.email a,
+.phone a {
+  margin-inline: 1rem;
+  text-wrap: nowrap;
+}
 .footer-right {
   width: 40%;
   height: 100% !important;
@@ -50,12 +56,9 @@ footer {
   justify-content: center;
   row-gap: 10px;
 
-  h6 {
+  span {
     color: var(--white-color);
     font-size: 1rem;
-    font-family: "EB Garamond", serif;
-  }
-  a {
-    margin-left: 20px;
+    font-family: --eb-garamond;
   }
 }

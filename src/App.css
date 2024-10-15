@@ -1,7 +1,7 @@
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: "Rubik", sans-serif;
+  --rubik: "Rubik", sans-serif;
   --font-serif: "Cardo", serif;
   --afacad-flux: "Afacad Flux", sans-serif;
   --montserrat: "Montserrat", sans-serif;
@@ -20,7 +20,23 @@
 .content-hidden {
   display: none;
 }
-
+.show-navbar {
+  left: 0 !important;
+  transition: all 0.4s !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  text-rendering: optimizeSpeed !important;
+}
+.wrapper {
+  width: min(80%, 1536px);
+}
 .content-visible {
   display: block;
 }
@@ -36,7 +52,7 @@
   justify-content: center;
   background-color: var(--main-blue);
 }
-.wrapper {
+.loading-wrapper {
   width: 200px;
   height: 60px;
   position: relative;
@@ -127,62 +143,152 @@
 .loading-card.end-loading {
   display: none;
 }
-@media (min-width: 320px) and (max-width: 480px) {
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 1024px) {
   html {
-    font-size: 12px !important;
+    font-size: 14px;
   }
-  .nav-container {
-    width: 95%;
-    p {
-      max-width: 40%;
-    }
+  .projects .card {
+    height: 300px;
   }
-  .main-container {
-    position: relative;
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  #hero .main-wave {
+    bottom: -25px;
+    height: 100px;
+  }
+  #hero .bg-layer1 {
+    display: none;
+  }
+  #hero .main-container {
+    flex-direction: column-reverse;
     width: 90%;
-    height: calc(100vh - 100px);
+  }
+  #hero .main-container .main-image {
+    width: 60%;
 
-    .main-image {
-      position: absolute;
-      top: 30px;
-      right: 0px;
-    }
     img {
-      width: 120px;
+      width: 90%;
     }
+  }
+  #hero .main-container .main-title .main-heading {
+    font-size: 5rem;
+    text-align: center;
+  }
+  #hero .main-container .main-image .dev-lines {
+    width: 50%;
+    left: 0;
+    bottom: 0;
   }
   .personalInfo {
-    padding-block: 0;
-    .personal-info-container {
-      width: 90%;
-      .about-me,
-      .skills,
-      .education,
-      .experience {
-        width: 100%;
-      }
-    }
+    padding-block: 0px;
   }
-  .projects-container {
-    width: 90%;
-    .card {
-      width: 100%;
-      height: 300px;
-    }
+  .personalInfo .wrapper {
+    row-gap: 5rem;
   }
-  .footer-container {
-    width: 90%;
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  #logo {
+    width: 70%;
+    transform: translate(-25%, -20px);
+  }
+  #nav {
+    width: 90vw;
+    height: 101vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: -90vw;
+    z-index: 999;
+  }
+  #nav .nav-close-btn {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    border-top: 1px solid rgba(255, 255, 255, 0.479);
+  }
+  #nav .wrapper {
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    row-gap: 50px;
-    padding-block: 20px;
-
-    .footer-left,
-    .footer-right {
-      width: 90%;
-      display: flex;
-      justify-content: start;
-    }
+    justify-content: start;
+    align-items: start;
+    row-gap: 3rem;
+  }
+  #nav .center {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #nav .center .referrer-btn {
+    font-size: 2rem;
+    text-shadow: 0px 0px 2px #161616;
+  }
+  #hero .bg-layer1 {
+    display: none;
+  }
+  #hero .line-vector {
+    top: 100%;
+  }
+  #hero .open-nav-btn {
+    display: block;
+  }
+  #hero .main-wave {
+    height: 30px;
+    bottom: -5px;
+  }
+  #hero .line-vector {
+    width: 200px;
+    transform: none;
+  }
+  #hero .main-container .main-title .main-heading {
+    font-size: 4rem;
+  }
+  #hero .main-title .job {
+    text-align: center;
+  }
+  #hero .main-container {
+    padding-block: 10vh;
+  }
+  .personalInfo {
+    padding-block: 3rem;
+  }
+  .personal-info-container {
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+  .personal-info-container > div {
+    width: 100%;
+  }
+  .projects .card {
+    width: 100%;
+    flex-direction: column;
+  }
+  .projects .card .card-img {
+    width: 100%;
+  }
+  .projects .card .content {
+    width: 100%;
+  }
+  .footer .footer-container {
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+  }
+  .footer .footer-left,
+  .footer .footer-right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 240px) {
+  * .wrapper {
+    width: min(90%, 1536px);
   }
 }

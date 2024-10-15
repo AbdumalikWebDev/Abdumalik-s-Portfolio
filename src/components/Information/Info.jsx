@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export function Info() {
   return (
     <section className="personalInfo" id="info-section">
-      <div className="personal-info-container">
+      <div className="personal-info-container wrapper">
         <div className="about-me" data-aos="fade-left">
           <h4>About Me</h4>
           <p>

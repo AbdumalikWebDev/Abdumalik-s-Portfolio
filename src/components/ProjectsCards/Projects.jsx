@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./Projects.css";
 import "/src/index.css";
-import { useState, useEffect } from "react";
 
 export const Projects = () => {
   return (

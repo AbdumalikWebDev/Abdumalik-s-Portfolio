@@ -6,11 +6,14 @@
   align-items: start;
   position: sticky;
   overflow: hidden;
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%231f3170' fill-opacity='0.47' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-color: white;
+  overflow-x: hidden !important;
 }
 .layer {
   overflow: hidden;
+}
+#hero .open-nav-btn {
+  display: none;
 }
 .main-wave {
   width: 100%;
@@ -20,17 +23,18 @@
   left: 0;
   right: 0;
   height: clamp(30px, 10vh, 100px);
+  user-select: none;
+  pointer-events: none;
 }
 .bg-layer1 {
-  width: fit-content;
-  height: 100%;
-  /* background-image: url("/assets/bg-layer1.png");
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: bottom right; */
-  /* transform: rotateX(180deg) !important; */
   position: fixed;
   right: 0;
+  max-width: 100vw;
+  line-height: 0;
+  width: 500px;
+  bottom: 0;
+  user-select: none;
+  pointer-events: none;
 }
 .main-container {
   width: min(80%, 1536px);
@@ -39,22 +43,45 @@
   align-items: center;
   padding-block: 20vh;
   transition: all 0s;
+  position: fixed;
 }
 .main-title {
   padding-block: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  h1 {
-    font-family: "EB Garamond", serif;
+  position: relative;
+  overflow: visible !important;
+
+  .main-heading {
+    font-family: var(--font-serif);
     font-weight: 400;
     font-size: 3.5rem;
     max-width: 100%;
     text-align: left;
+    color: color-contrast(#161616 vs var(--main-blue));
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-family: inherit;
+      font-weight: inherit;
+    }
   }
   .job {
-    font-family: "Platypi", serif;
+    font-family: var(--platypi);
     font-size: 1.7rem;
+  }
+  .line-vector {
+    position: absolute;
+    right: 0;
+    top: -70%;
+    width: 300px;
+    transform: translate(50%, 60%);
+    user-select: none;
+    pointer-events: none;
   }
 }
 .main-image {
@@ -63,29 +90,25 @@
   justify-content: center;
   padding: 20px;
   position: relative;
+  overflow: visible !important;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 5%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    user-select: none;
-    background-image: url("/assets/plus-1512-svgrepo-com.svg");
-    background-size: 100px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100%;
-    pointer-events: none;
-  }
-
-  img {
+  .dev-image {
     width: 300px;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     filter: saturate(0%);
     box-shadow: 0px 10px 10px -3px #000000a2;
+    user-select: none;
+    pointer-events: none;
+  }
+  .dev-lines {
+    position: absolute;
+    left: -150px;
+    bottom: -100px;
+    width: 100px;
+    pointer-events: none;
+    user-select: none;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(64%) saturate(2330%)
+      hue-rotate(214deg) brightness(86%) contrast(89%);
   }
 }
