@@ -15,7 +15,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 20px;
+  row-gap: 50px;
+
   .info-title {
     font-size: 1.5rem;
     font-family: var(--platypi);
@@ -35,12 +36,6 @@
     line-height: 150%;
     color: #ffffffc0;
     font-weight: 500;
-
-    i {
-      font-size: 1.5rem;
-      padding-right: 5px;
-      color: var(--white);
-    }
   }
 }
 

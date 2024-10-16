@@ -30,6 +30,10 @@
   font-size: 2rem;
   background-color: transparent;
   cursor: pointer;
+
+  .icon {
+    font-size: 1.4rem !important;
+  }
 }
 .nav-container {
   height: 100%;

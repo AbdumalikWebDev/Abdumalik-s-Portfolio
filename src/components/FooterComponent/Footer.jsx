@@ -19,11 +19,34 @@ export function Footer() {
         </div>
         <div className="footer-right">
           <div className="phone">
-            <span>Phone:</span>
-            <a href="telto:">Available in Telegram</a>
+            <span>
+              <img
+                src="/assets/phone-icon.svg"
+                alt="phone, call, phone icon, svg icon"
+                loading="lazy"
+                className="icon"
+              />
+              Phone:
+            </span>
+            <a href="https://t.me/newwebdevs">
+              Available in Telegram
+              <img
+                src="/assets/telegram.svg"
+                alt="Telegram"
+                className="icon"
+                loading="lazy"
+              />
+            </a>
           </div>
           <div className="email">
-            <span>Email:</span>
+            <span>
+              <img
+                src="/assets/envelope.svg"
+                alt="envelope icon, icon, svg icon"
+                className="icon"
+              />
+              Email:
+            </span>
             <a href="mailto:">bg20092022@gmail.com</a>
           </div>
         </div>

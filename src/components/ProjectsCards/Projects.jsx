@@ -8,7 +8,7 @@ export const Projects = () => {
       <h4 className="title">My Projects</h4>
 
       <div className="projects-container">
-        <div className="card1 card" data-aos="fade-up-left">
+        <div className="card1 card">
           <div className="card-img">
             <span className="project-title">Web Studio</span>
           </div>
@@ -49,7 +49,7 @@ export const Projects = () => {
             </a>
           </div>
         </div>
-        <div className="card2 card" data-aos="fade-up-right">
+        <div className="card2 card">
           <div className="card-img">
             <span className="project-title">Pro Monitor</span>
           </div>
@@ -86,7 +86,7 @@ export const Projects = () => {
             </a>
           </div>
         </div>
-        <div className="card3 card" data-aos="fade-up-left">
+        <div className="card3 card">
           <div className="card-img">
             <span className="project-title">FoodWagon</span>
           </div>

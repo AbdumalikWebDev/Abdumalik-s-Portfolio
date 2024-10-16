@@ -5,8 +5,8 @@
 .footer {
   width: 100%;
   height: fit-content;
-  padding-block: 20px;
-  background-color: #309233;
+  padding-block: 5vh;
+  background-color: #1D5E1F;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,10 +29,6 @@
     font-family: var(--montserrat);
     max-width: 100%;
   }
-  a {
-    color: var(--white-color);
-    font-family: inherit;
-  }
 }
 .footer-left {
   display: flex;
@@ -45,8 +41,18 @@
 }
 .email a,
 .phone a {
-  margin-inline: 1rem;
+  display: flex;
+  align-items: center;
   text-wrap: nowrap;
+  color: var(--white-color);
+  font-family: inherit;
+  margin-inline: 1rem;
+  font-size: 1.2rem;
+}
+.email span,
+.phone span {
+  display: flex;
+  align-items: center;
 }
 .footer-right {
   width: 40%;

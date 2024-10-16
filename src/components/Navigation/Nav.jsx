@@ -52,7 +52,13 @@ export function Nav({ navbarOpen, toggleNavbar }) {
       <div className="nav-container wrapper">
         <img src={logo} id="logo" alt="Scroll.M" />
         <button className="nav-close-btn" onClick={toggleNavbar}>
-          <i className="fa-solid fa-xmark"></i> Close
+          <img
+            src="/assets/x-mark.svg"
+            loading="lazy"
+            className="icon"
+            alt="close icon, icon"
+          />
+          Close
         </button>
         <div className="center">
           <a

@@ -24,16 +24,36 @@ export function Info() {
           </span>
           <div className="row1">
             <p data-aos="fade-right">
-              <i className="fa-brands fa-html5"></i>HTML
+              <img
+                src="/assets/html-icon.svg"
+                alt="html icon, icon, svg icon"
+                className="icon"
+              />
+              HTML
             </p>
             <p data-aos="fade-right">
-              <i className="fa-brands fa-css3-alt"></i>CSS
+              <img
+                src="/assets/css-icon.svg"
+                alt="CSS, CSS icon, CSS svg icon, icon, svg icons"
+                className="icon"
+              />
+              CSS
             </p>
             <p data-aos="fade-right">
-              <i className="fa-brands fa-js"></i>JavaScript
+              <img
+                src="/assets/js-icon.svg"
+                alt="JavaScript, JavaScript icon, icon, svg icon"
+                className="icon"
+              />
+              JavaScript
             </p>
             <p data-aos="fade-right">
-              <i className="fa-brands fa-react"></i>React
+              <img
+                src="/assets/react-icon.svg"
+                alt="React, svg icon, icon, react icon"
+                className="icon"
+              />
+              React
             </p>
           </div>
           <div className="row2"></div>
