@@ -14,7 +14,7 @@ export function MainContent({ toggleNavbar }) {
     lineMainIllustrator.src = "/assets/line-main.svg";
     lines1.src = "/assets/lines1.webp";
     waveImage.src = "/assets/Wave.webp";
-    mainIllustatorBg.src = "/assets/bglayer1.webp";
+    mainIllustatorBg.src = "/assets/bg-layer1.webp";
     mainUserImage.src = "/assets/dev-image.webp";
   }, []);
   (function () {
