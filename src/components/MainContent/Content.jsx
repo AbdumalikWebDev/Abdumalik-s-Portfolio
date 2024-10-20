@@ -6,6 +6,11 @@ import devImage from "/assets/dev-image.webp";
 
 export function MainContent({ toggleNavbar }) {
   useEffect(() => {
+    const lineMainIllustrator = new Image();
+    const lines1 = new Image();
+    const mainUserImage = new Image();
+    const mainIllustatorBg = new Image();
+    const waveImage = new Image();
     lineMainIllustrator.src = "/assets/line-main.svg";
     lines1.src = "/assets/lines1.webp";
     waveImage.src = "/assets/Wave.webp";

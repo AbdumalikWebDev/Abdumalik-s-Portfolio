@@ -1,8 +1,3 @@
-const lineMainIllustrator = new Image();
-const lines1 = new Image();
-const mainUserImage = new Image();
-const mainIllustatorBg = new Image();
-const waveImage = new Image();
 (function () {
   window.addEventListener("scroll", function () {
     var depth, i, layer, layers, len, movement, topDistance, translate3d;
