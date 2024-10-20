@@ -28,6 +28,8 @@ export function Info() {
                 src="/assets/html-icon.svg"
                 alt="html icon, icon, svg icon"
                 className="icon"
+                width="24"
+                height="24"
               />
               HTML
             </p>
@@ -36,6 +38,8 @@ export function Info() {
                 src="/assets/css-icon.svg"
                 alt="CSS, CSS icon, CSS svg icon, icon, svg icons"
                 className="icon"
+                width="24"
+                height="24"
               />
               CSS
             </p>
@@ -44,6 +48,8 @@ export function Info() {
                 src="/assets/js-icon.svg"
                 alt="JavaScript, JavaScript icon, icon, svg icon"
                 className="icon"
+                width="24"
+                height="24"
               />
               JavaScript
             </p>
@@ -52,6 +58,8 @@ export function Info() {
                 src="/assets/react-icon.svg"
                 alt="React, svg icon, icon, react icon"
                 className="icon"
+                width="24"
+                height="24"
               />
               React
             </p>
@@ -60,12 +68,13 @@ export function Info() {
         </div>
         <div className="education" data-aos="fade-up">
           <span className="info-title">Education</span>
-          <h3>9th general education school of 2016</h3>
+          <h3>9th general education school of 2015</h3>
           <p>
-            In 2015, I was deeply immersed in the vibrant world of general
-            education school. Mathematics intrigued me with its intricate
-            puzzles and logical reasoning, laying the groundwork for my later
-            fascination with strategic thinking in chess and coding.
+            In 2015, I entered the 9th general secondary school in Karshi. I
+            studied there with excellent grades and wanted to graduate. At
+            school I was interested in sports and mental sports games. I also
+            exercise to keep my body healthy. I am good at English, Mathematics,
+            Geometry.
           </p>
         </div>
         <div className="experience" data-aos="fade-up">

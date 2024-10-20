@@ -14,6 +14,10 @@
 }
 #hero .open-nav-btn {
   display: none;
+
+  img {
+    width: 26px;
+  }
 }
 .main-wave {
   width: 100%;

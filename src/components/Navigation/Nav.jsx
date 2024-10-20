@@ -57,6 +57,8 @@ export function Nav({ navbarOpen, toggleNavbar }) {
             loading="lazy"
             className="icon"
             alt="close icon, icon"
+            width="24"
+            height="24"
           />
           Close
         </button>

@@ -38,7 +38,6 @@ p {
   width: min(80%, 1400px);
 }
 .icon {
-  width: 1.2rem;
   display: inline-block;
   margin-inline: 4px;
   user-select: none;
@@ -149,8 +148,6 @@ p {
 .loading-card.end-loading {
   display: none;
 }
-@media only screen and (max-width: 1200px) {
-}
 @media only screen and (max-width: 1024px) {
   html {
     font-size: 14px;
@@ -202,7 +199,6 @@ p {
     font-size: 12px;
   }
   #logo {
-    width: 70%;
     transform: translate(-25%, -20px);
   }
   #nav {
@@ -245,7 +241,7 @@ p {
     top: 100%;
   }
   #hero .open-nav-btn {
-    display: block;
+    display: flex;
   }
   #hero .main-wave {
     height: 30px;

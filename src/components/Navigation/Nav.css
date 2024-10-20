@@ -63,7 +63,8 @@
   }
 }
 #logo {
-  width: 10vw;
+  width: 150px;
+  height: 100px;
   transform: translateX(-25%);
   transition: all 0.2s;
   user-select: none;

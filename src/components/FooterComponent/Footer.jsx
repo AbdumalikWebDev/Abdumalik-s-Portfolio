@@ -25,6 +25,8 @@ export function Footer() {
                 alt="phone, call, phone icon, svg icon"
                 loading="lazy"
                 className="icon"
+                width="24"
+                height="24"
               />
               Phone:
             </span>
@@ -35,6 +37,8 @@ export function Footer() {
                 alt="Telegram"
                 className="icon"
                 loading="lazy"
+                width="24"
+                height="24"
               />
             </a>
           </div>
@@ -44,6 +48,8 @@ export function Footer() {
                 src="/assets/envelope.svg"
                 alt="envelope icon, icon, svg icon"
                 className="icon"
+                width="24"
+                height="24"
               />
               Email:
             </span>

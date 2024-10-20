@@ -28,7 +28,7 @@ export function App() {
       setTimeout(() => {
         setIsLoaded(true);
         AOS.refresh();
-      }, 3000);
+      }, 2000);
     };
 
     if (document.readyState === "complete") {

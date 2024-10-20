@@ -6,31 +6,19 @@ import devImage from "/assets/dev-image.webp";
 
 export function MainContent({ toggleNavbar }) {
   useEffect(() => {
-    const preloadImage = new Image();
-    preloadImage.src = "/assets/dev-image.webp";
+    lineMainIllustrator.src = "/assets/line-main.svg";
+    lines1.src = "/assets/lines1.webp";
+    waveImage.src = "/assets/Wave.webp";
+    mainIllustatorBg.src = "/assets/bglayer1.webp";
+    mainUserImage.src = "/assets/dev-image.webp";
   }, []);
-  (function () {
-    window.addEventListener("scroll", function () {
-      var depth, i, layer, layers, len, movement, topDistance, translate3d;
-      topDistance = this.scrollY;
-      layers = document.querySelectorAll("[data-type='parallax']");
-      for (i = 0, len = layers.length; i < len; i++) {
-        layer = layers[i];
-        depth = layer.getAttribute("data-depth");
-        movement = -(topDistance * depth);
-        translate3d = "translate3d(0, " + movement + "px, 0)";
-        layer.style["-webkit-transform"] = translate3d;
-        layer.style["-moz-transform"] = translate3d;
-        layer.style["-ms-transform"] = translate3d;
-        layer.style["-o-transform"] = translate3d;
-        layer.style.transform = translate3d;
-      }
-    });
-  }).call(this);
+
   return (
     <main className="main" id="hero">
       <img
         src="/assets/bg-layer1.webp"
+        fetchpriority="high"
+        decoding="async"
         className="bg-layer1 layer"
         data-depth="0.20"
         data-type="parallax"
@@ -38,6 +26,7 @@ export function MainContent({ toggleNavbar }) {
       />
       <button
         className="open-nav-btn"
+        id="open-nav"
         onClick={toggleNavbar}
         aria-label="Open Navbar Button"
         style={{
@@ -49,7 +38,7 @@ export function MainContent({ toggleNavbar }) {
           fontSize: "2rem",
           zIndex: "100",
         }}>
-        <i className="fa-solid fa-bars"></i>
+        <img src="/assets/bars.svg" alt="bars, icon, bars icon" />
       </button>
       <div
         className="main-container wrapper"
@@ -66,11 +55,26 @@ export function MainContent({ toggleNavbar }) {
             src={lineVector}
             className="line-vector"
             alt="line, vector, illustrator"
+            fetchpriority="high"
+            decoding="async"
           />
         </div>
         <div className="main-image layer">
-          <img src="/assets/lines1.webp" alt="lines" className="dev-lines" />
-          <img src={devImage} className="dev-image" alt="User Image" />
+          <img
+            src="/assets/lines1.webp"
+            alt="lines"
+            className="dev-lines"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <img
+            src={devImage}
+            className="dev-image"
+            alt="User Image"
+            fetchpriority="high"
+            decoding="async"
+            loading="eager"
+          />
         </div>
       </div>
       <img
@@ -78,6 +82,8 @@ export function MainContent({ toggleNavbar }) {
         alt="wave"
         className="main-wave"
         data-type="parallax"
+        fetchpriority="high"
+        decoding="async"
       />
     </main>
   );
