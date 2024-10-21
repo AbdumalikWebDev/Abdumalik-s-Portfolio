@@ -1,0 +1,93 @@
+#whyme {
+  width: 100%;
+  background-color: #1d5e1f;
+  display: flex;
+  justify-content: center;
+  padding-block: 30px;
+}
+
+#whyme .wrapper {
+  height: 100%;
+  border: 15px solid var(--white);
+  margin-inline: auto;
+  background-color: #113f12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding-block: 50px;
+  box-shadow: 15px 10px 10px 3px rgba(0, 0, 0, 0.39);
+  position: relative;
+}
+#whyme .inner-shadow {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 10px 10px 8px rgba(0, 0, 0, 0.39) inset;
+}
+#whyme .whyme-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 95%;
+}
+#whyme .whyme-title h5 {
+  font-size: clamp(3rem, 4vw + 1rem, 5rem);
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0px 0px 3px #fff;
+  font-weight: 500;
+  text-align: center;
+  text-indent: 0;
+  text-rendering: geometricPrecision;
+}
+#whyme .whyme-title p {
+  text-align: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  max-width: clamp(30vw, 40vw, 50vw);
+  font-family: var(--font-serif);
+  text-rendering: optimizeLegibility;
+}
+#whyme .whyme-content {
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.whyme-content .row {
+  width: 25%;
+  min-width: 200px;
+  z-index: 1;
+}
+#whyme .row .paragraph {
+  color: var(--white);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+}
+.quality_title,
+.personal-touch_title,
+.innovative-approach_title {
+  color: var(--white);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 20% + 0.5rem, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-wrap: nowrap;
+  height: 80px;
+  gap: 10px;
+
+  .checked-icon,
+  .handshake-icon,
+  .creativity-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+      hue-rotate(306deg) brightness(107%) contrast(102%);
+    display: inline-block;
+  }
+}

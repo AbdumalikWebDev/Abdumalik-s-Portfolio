@@ -8,14 +8,12 @@ export function MainContent({ toggleNavbar }) {
   useEffect(() => {
     const lineMainIllustrator = new Image();
     const lines1 = new Image();
-    const mainUserImage = new Image();
     const mainIllustatorBg = new Image();
     const waveImage = new Image();
     lineMainIllustrator.src = "/assets/line-main.svg";
     lines1.src = "/assets/lines1.webp";
     waveImage.src = "/assets/Wave.webp";
     mainIllustatorBg.src = "/assets/bg-layer1.webp";
-    mainUserImage.src = "/assets/dev-image.webp";
   }, []);
   (function () {
     window.addEventListener("scroll", function () {

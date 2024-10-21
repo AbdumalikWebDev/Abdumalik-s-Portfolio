@@ -6,8 +6,6 @@
   justify-content: center;
   align-items: center;
   background-color: #1d3273;
-  position: relative;
-  z-index: 5;
 }
 .personal-info-container {
   width: 80%;

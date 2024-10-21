@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./Info.css";
 import "/src/index.css";
-import { useEffect } from "react";
 
 export function Info() {
   return (
@@ -11,11 +10,14 @@ export function Info() {
           <span className="info-title">About Me</span>
           <p>
             I enjoy breaking down complex problems into manageable parts and
-            finding optimal solutions. My commitment to both chess and gym
-            workouts reflects my disciplined approach to life. I understand the
+            finding viable solutions. My commitment to chess and gym training
+            reflects my disciplined approach to life. I understand the
             importance of consistent practice and effort in achieving my goals.
-            I strive to maintain a balanced lifestyle that nurtures both my mind
-            and body.
+            I strive to maintain a balanced lifestyle that nourishes both my
+            mind and body. I get up at 6:30 in the morning and get ready for
+            school at 8:00. After I get back from school at 1:30pm, I start my
+            Web Programming job for 3 or 4 hours. I can say that I spend at
+            least 2 hours every day on Web Programming.
           </p>
         </div>
         <div className="skills">
@@ -62,6 +64,40 @@ export function Info() {
                 height="24"
               />
               React
+            </p>
+            <p data-aos="fade-right">
+              <img
+                src="/assets/bootstrap.svg"
+                alt="bootstrap, icon, bootstrap icon svg"
+                className="icon"
+                width="24"
+                height="24"
+              />
+              Bootstrap
+            </p>
+            <p data-aos="fade-right">
+              <img
+                src="/assets/netlify.svg"
+                alt="netlify, icon, netlify icon svg"
+                className="icon"
+                width="24"
+                height="24"
+                style={{
+                  filter:
+                    "brightness(0) saturate(100%) invert(100%) sepia(87%) saturate(768%) hue-rotate(194deg) brightness(123%) contrast(95%)",
+                }}
+              />
+              Netlify
+            </p>
+            <p data-aos="fade-right">
+              <img
+                src="/assets/github.svg"
+                alt="github, icon, github svg icon"
+                className="icon"
+                width="24"
+                height="24"
+              />
+              Github
             </p>
           </div>
           <div className="row2"></div>

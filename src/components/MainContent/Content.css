@@ -19,7 +19,7 @@
     width: 26px;
   }
 }
-.main-wave {
+#hero .main-wave {
   width: 100%;
   max-width: 100vw;
   position: absolute;
@@ -35,8 +35,8 @@
   right: 0;
   max-width: 100vw;
   line-height: 0;
-  width: 500px;
-  bottom: 0;
+  width: 40vw;
+  bottom: -30px;
   user-select: none;
   pointer-events: none;
 }
